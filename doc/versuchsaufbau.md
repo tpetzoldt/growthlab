@@ -142,7 +142,9 @@ und unten den kompletten Schaltungsaufbau auf dem Breadboard. Zur Vermeidung von
 wurde der Sensor an ein Flachbandkabel gelötet. Für den Anschluss an den Arduino dienen vier 
 Adern eines Dupont-Jumperkabels. Im Foto wurde im Interesse der Übersicht die 
 Laserdiodenschaltung weggelassen. Der Versuchsaufbau lässt sich auch als behelfsmäßiges
-Luxmeter einsetzen.
+Luxmeter einsetzen. Man beachte, dass die Stromversorgung über ein Netzteil erfolgt 
+(runde Buchse) und nicht über USB. d.h. die Schaltung ist nach der Programmierung
+autark ohne Computer lauffähig.
 
 
 ```{C++}
