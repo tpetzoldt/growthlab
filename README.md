@@ -27,5 +27,9 @@ https://tpetzoldt.github.io/growthlab
 Literatur
 
 [1] Snider, S. B. & Brimlow, J. N. (2013) An Introduction to Population Growth. Nature Education Knowledge 4(4):3
+
 [2] Obama, B. (2014) Nation of Makers. https://obamawhitehouse.archives.gov/nation-of-makers abgerufen am 2019-05-28
+
 [3] Wikipedia (2019) Makerbewegung. https://de.wikipedia.org/wiki/Maker abgerufen am 2019-05-28
+
+[tpetzoldt](https://github.com/tpetzoldt)
