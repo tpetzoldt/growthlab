@@ -18,6 +18,12 @@ Je nach Ausbaustufe ist das Experiment sehr einfach und erfordert weder Programm
 
 Der Versuchsaufbau wurde im Rahmen eines Schülerpraktikums (Gymnasium 11. Klasse) entwickelt. Die gewonnen Daten werden in Kursen zu ökologischer Statistik und Modellierung verwendet.
 
+Ausführliche Dokumentation auf:
+
+[https://tpetzoldt.github.io/growthlab]
+
+* Versuchsaufbau: [https://tpetzoldt.github.io/growthlab/doc/versuchsaufbau.html]
+
 Literatur
 
 [1] Snider, S. B. & Brimlow, J. N. (2013) An Introduction to Population Growth. Nature Education Knowledge 4(4):3
