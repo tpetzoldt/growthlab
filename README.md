@@ -20,9 +20,9 @@ Der Versuchsaufbau wurde im Rahmen eines Schülerpraktikums (Gymnasium 11. Klass
 
 Ausführliche Dokumentation auf:
 
-[https://tpetzoldt.github.io/growthlab]
+https://tpetzoldt.github.io/growthlab
 
-* Versuchsaufbau: [https://tpetzoldt.github.io/growthlab/doc/versuchsaufbau.html]
+* Versuchsaufbau: https://tpetzoldt.github.io/growthlab/doc/versuchsaufbau.html
 
 Literatur
 
