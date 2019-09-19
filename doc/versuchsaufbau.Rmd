@@ -113,7 +113,7 @@ Wenn man die IDE installiert hat und das Blink-Beispiel funktioniert, kann man
 sich bereits and das unten stehende Beispiel trauen. Die Messwerte des Sensors 
 erscheinen dann als relative Einheiten auf dem Computer.
 
-```
+```{c eval=FALSE}
 /*
   Arduino analog light sensor example
   Output can be shown via the Arduino serial monitor or serial plotter
@@ -164,7 +164,7 @@ autark ohne Computer lauffähig.
 
 ### Der Code
 
-```
+```{c eval=FALSE}
 /*
   Combines the BH1750 digital Light sensor with an OLED display
 
