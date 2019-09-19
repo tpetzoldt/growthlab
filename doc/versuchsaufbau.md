@@ -2,7 +2,15 @@
 title: "Versuchsaufbau"
 author: "Thomas Petzoldt"
 date: "2019-09-17"
-output: html_document
+output: 
+  html_document:
+    numbersections: true
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_folding: show
+
 ---
 
 # Grundidee
@@ -12,16 +20,16 @@ einem Lichtsensor und einem Messgerät. Das Prinzip ähnelt einem Photometer, alle
 wird auf Präzisionsoptik und -mechanik verzichtet, um einen kostengünstigen Nachbau
 zu ermöglichen.
 
-Außerdem kann im Unterschied zu einem typischen Photometer direkt durch das Glas 
-der Flasche gemessen werden. Das ist optisch zwar wesentlich ungünstiger als eine
-Küvette, ermöglicht jedoch Messungen in geschlossenen Kolben oder Flaschen.
+Im Unterschied zu einem typischen Photometer kann direkt durch das Glas 
+der Flasche gemessen werden. Das ist zwar optisch ungünstiger als eine
+Küvette, ermöglicht aber Messungen in geschlossenen Kolben oder Flaschen.
 
 Je nach Ausbaustufe kann die Messung manuell erfolgen oder mit einem Mikrocontroller.
 Dieser erlaubt dann auch weitere Steuerungsaufgaben, z.B. Licht und Rührer.
 
 Das Experiment ist als Schüler-, Studien- und Praktikumsexperiment vorgesehen. 
 Bei entsprechend höherem Aufwand und Kosten für Mechanik, Optik und Elektronik 
-ist wäre eine Weiterentwicklung für Forschungszwecke denkbar, allerdings sind
+ist eine Weiterentwicklung für Forschungszwecke denkbar, allerdings sind
 solche Geräte bereits kommerziell erhältlich.
 
 Im folgenden soll der Versuch, ausgehend von der Grundidee, schrittweise bis zur
@@ -33,7 +41,7 @@ Das hier vorgefundene Dokument stellt den jeweiligen Arbeitsstand dar.
 # Phytoplanktonkultur
 
 Im vorliegenden Fall wird eine Kultur der Grünalge *Scenedesmus* verwendet. Diese 
-Art ist sehr konkurrenzstark und kann unsteril gehalten werden, was den Versuch sehr 
+Art ist sehr konkurrenzstark und kann unsteril kultiviert werden, was den Versuch sehr 
 erleichtert. Prinzipiell kann man auch eine sogenannte Verdrängungskultur aus einer
 Freilandprobe ansetzen.
 
@@ -43,14 +51,14 @@ benutzt. Hier kann man schon einmal das chemische Rechnen üben. Mehr dazu folgt 
 # Experiment 1: Manuelle Messung mit einem Voltmeter
 
 Die einfachste Aufbaustufe zeigt bereits das Grundprinzip. Die Messtrecke wird durch eine
-LED und ein Photowiderstand gebildet, die in einem
+LED und ein Photowiderstand gebildet, die an einem
 Gestell befestigt sind. Das Gestell besteht im vorliegenden Fall aus einer Sperrholzgrundplatte, 
 Gewindestangen (M4) und etwas Plexiglas, könnte im Prinzip aber auch aus dem Lego- oder Metallbaukasten stammen.
 
 Als elektronische Bauelemente genügen neben der LED und dem Photowiderstand ein sogenanntes *Breadboard* (Steckbrett),
-2 Widerstände, Steckbrücken bzw. etwas Draht und ein Voltmeter. Da nur Spannung gemessen werden muss, genügt ein preiswertes Gerät. Zur LED ist zu sagen, dass es sich hier um eine preiswere Laser-LED (ähnlich einem Laserpointer) handelt. 
+2 Widerstände, Steckbrücken bzw. etwas Draht und ein Voltmeter. Da nur Spannung gemessen werden muss, genügt ein preiswertes Gerät. Zur LED ist zu sagen, dass es sich hier um eine günstige Laser-LED (ähnlich einem Laserpointer) handelt. 
 Diese besitzt sogar eine kleine Linse zur Fokussierung. Grundsätzlich sind auch andere LEDs geeignet. Wichtig ist, dass
-jede LED mit einem Vorwiderstand oder einer Konstantstromquelle (siehe unten) betrieben werden muss, sonst geht sie kaputt. Laser-LEDs sind besonders empfindlich.
+eine LED fast immer mit einem Vorwiderstand oder einer Konstantstromquelle (siehe unten) betrieben werden muss, sonst geht sie kaputt. Laser-LEDs sind besonders empfindlich.
 
 **Vorsicht:** Das man einen Laser nicht auf die Augen oder auf spiegelnde Flächen 
 richtet, sollte selbstverständlich sein. Achtung: auch die Flasche kann spiegeln!
@@ -78,20 +86,20 @@ mit längeren Leitungen versehen und am Gestell befestigt.
 
 # Experiment 2: Messung mit einem Arduino Uno
 
-Der Arduino Uno und seine kompatiblen Nachbauten (nur Uno genannt) sind Microcontroller-Bastelszene
+Der [Arduino Uno](https://www.arduino.cc) und seine kompatiblen Nachbauten (nur Uno genannt) sind in der Mikrocontroller-Bastelszene
 praktisch die "Klassiker". Es gibt inzwischen zwar viel leistungsfähigere Controller: schneller, mehr Speicher, WLAN usw., aber der UNO ist nach wie vor weit verbreitet und besonders einfach zu programmieren.
 
 Im folgenden Experiment wird das Voltmeter durch einen Uno ersetzt, die übrige 
-Schaltung bleibt gleich. Die USB-Verbindung mit einem Computer hat gleich dreifache Bedeutung:
+Schaltung bleibt gleich. Die USB-Verbindung mit einem Computer hat eine dreifache Funktion:
 
 - Stromversorgung des Uno (Spannung 5V) 
-- Programmierung des Uno mit der Arduino-IDE (IDE = ingegrierte Entwicklungsumgebung)
+- Programmierung des Uno mit der [Arduino-IDE](https://www.arduino.cc/en/Main/Software) (IDE = ingegrierte Entwicklungsumgebung)
 - Ausgabe der Daten auf dem Bildschirm mittels "Seriellem Monitor" bzw. "Seriellem Plotter" der Arduino-IDE
 
 
 <img src="led-phot-arduino.png" alt="Messung Arduino" width="500"/>
 
-## Der Code
+### Der Code
 
 Eine Detaillierte Einführung in die Mikrocontrollerprogrammierung würde den Rahmen dieses Projekts
 sprengen. Die Installation Arduino-IDE sowie erste Gehversuche sind auf diversen Internetseiten sehr ausführlich beschrieben, z.B. auf https://www.arduino.cc/en/Guide/HomePage
@@ -126,7 +134,8 @@ void loop() {
 Für das folgende Experiment benötigen wir einen digitalen Lichtsensor (BH1750) 
 und ein OLED-Display (z.B. ein SH1106 mit 128 x 64 Pixeln), beide mit 
 sogenannter I2C-Schnittstelle. Der Vorteil on I2C ist, dass man nur 4 Leitungen 
-benötigt und dass man beide Schaltkreise einfach parallel schalten kann.
+benötigt (Stromversorgung, Masse und 2 Datenleitungen) und dass mehrere beide Schaltkreise 
+einfach parallel schalten kann.
 
 Prinzipiell sind auch andere Sensoren und Displays geeignet. In diesem Fall sind 
 Schaltung und Code entsprechend anzupassen. Vorher sollte man die Chips 
@@ -142,8 +151,8 @@ und unten den kompletten Schaltungsaufbau auf dem Breadboard. Zur Vermeidung von
 wurde der Sensor an ein Flachbandkabel gelötet. Für den Anschluss an den Arduino dienen vier 
 Adern eines Dupont-Jumperkabels. Im Foto wurde im Interesse der Übersicht die 
 Laserdiodenschaltung weggelassen. Der Versuchsaufbau lässt sich auch als behelfsmäßiges
-Luxmeter einsetzen. Man beachte, dass die Stromversorgung über ein Netzteil erfolgt 
-(runde Buchse) und nicht über USB. d.h. die Schaltung ist nach der Programmierung
+Luxmeter einsetzen. Man beachte, dass die Stromversorgung über ein Netzteil erfolgen kann 
+(runde Buchse) und nicht über USB, d.h. die Schaltung ist nach der Programmierung
 autark ohne Computer lauffähig.
 
 
@@ -217,24 +226,94 @@ void loop() {
 
 # Ausblick: Internet of Things: Automatische Messeinrichtung mit WLAN
 
+Die oben beschriebene Versuchsanordnung lässt sich beliebig anpassen und erweitern. 
+In einer weiteren Ausbaustufe soll der Controller vollautomatisch agieren und die
+Messdaten abspeichern. Da der Uno hier schnell an seine Grenzen gelangt, sollte man
+einen leistungsfähigen Controller einsetzen, z.B. einen ESP8266 oder einen ESP32.
+Entwicklerboards mit diesen Controllern sind kaum teurer als ein Arduino, bieten 
+jedoch viel mehr Leistung: kleiner, schneller, mehr Speicher, flexiblere Schnittstellen, 
+WLAN, Bluetooth, Stromsparfunktionen.
+
+Für den folgenden Aufbau wurde ein "ESP32 Dev Kit C" verwendet. Er steuert folgende Funktionen:
+
+* Messung der optischen Dichte (mit Photowiderstand)
+* Messung der Temperatur mit ein ider mehreren digitalen temperatursensoren (DS18B20)
+* An- und ausschalten der Laserdiode
+* Steuerung der Beleuchtung (eines LED-Streifens): An/Aus, Helligkeit
+* Steuerung eines Magnetrührers
+* Zeitsynchronisation von einem Internet-Zeitserver
+* WLAN-Übertragung von Messdaten und Steuerinformationen überdas MQTT-Protokoll 
+  an einen Datenbankserver.
+* Möglichkeit, die Steuerungssoftware im laufenden Betrieb "over the air" 
+  (OTA per WLAN) zu aktualisieren. Über diesen Weg lassen sich z.B. das Messintervall
+  oder das Rühr- oder Lichtregime (Dauerlicht, 16:8, gepulst) verändern.
+
 <img src="esp-full-experiment.jpg" alt="Experimenteller Aufbau" width="600"/>
 
 <img src="esp-full-circuit.png" alt="Schaltplan" width="600"/>
 
+### Spannungs- und Stromversorgung
 
-# Tipps und Tricks
+Die für den Versuchsaufbau verwendeten Bauelemente benötigen unterschiedliche 
+Spannungen (z.B. 3.3V. 5V, 12V, 24V) und Ströme. Während der ESP32 und die Sensoren 
+3.3V benötigen (und keinesfalls mehr als 3.6V), benötigt der verwendete Rührermotor 5V
+und die LED-Streifen je nach Typ 12V oder 18-24V.
+
+Diese unterschiedlichen Anforderungen wurden wie folgt gelöst.
+
+#### Spannung
+
+* 5V: der ESP32 wird über seinen USB-Eingang mit 5V aus einem Handynetzteil versorgt. 
+  Der interne Spannungsregler des "Dev Boards" stellt daraus die 3.3V her.
+* 3.3V: Die Sensoren (Photowiderstand, temperatursensoren) müssen mit dem selben 
+Pegel arbeiten wie der ESP. Die dafür benötigte Spannung wird vom 3.3V-Ausgang 
+des "Dev Boards" abgezweigt.
+* 12V bzw. 24V: Hierzu wird ein kleines aber sehr effizientes Transformatormodul
+benutzt (MT3608 DC-DC Step up Modul, auf dem Foto die kleinere Platine). 
+Mit Hilfe eines Einstellpotentiometers (blaues bauteil auf der Platine) 
+lässt sich die gewünschte Ausgangsspannung einstellen. Je nach Leistungsfähigkeit der Handy-Netzteils und der maximalen Leistungsaufnahme des LED-Streifens kann die volle Leistung eventuell nicht ganz abgerufen werden, damit für den ESP und die anderen bauteile genügend Strom übrigbleibt. Im vorliegenden Fall wird der 24V-LED-Streifen nur mit 20V betrieben.
+
+Details sind dem Schaltplan und der folgenden Erläuterung zu entnehmen.
+
+#### Strom
+
+Motoren und LEDs benötigen eventuell mehr Strom (und ggf. eine andere Spannung) 
+als der ESP32 von sich aus bereitstellen kann. Prinzipiell kann man das mit Relais lösen.
+Als energiesparendere (und billigere) Alternative wurden für diesen Zweck Transistoren verwendet,
+konkret MOSFETS vom Typ IRLZ24N. Sie bieten für den verwendungszweck genügend Leistungsreserven.
+
+Mit Hilfe der MOSFETs lassen sich die jeweils benötigten Spannungen schalten.
+
+#### Temperaturabhängigkeit
+
+Laser-LEDs sind stark temperaturabhängig. Bei einem ersten Versuch kam es trotz 
+temperiertem Raum zu relativ starken Schwankungen des Messignals. Eine vorgeschaltete
+Konstantstromquelle (CL2N3-G, 20mA, 0.6W) konnte die Temperaturabhängigkeit sehr stark vermindern.
+Das Bauteil hat 2 beschaltete Pins und wird einfach in Reihe zum Laser eingefügt. 
+Da am Bauteil jedoch immer ein gewisser Spannungsabfall stattfindet, benötigt 
+man nun allerdings eine Spannung von mindestens circa 7 Volt, so dass die Laser-LED
+nun über die 12 bzw. 20V-Leitung versorgt werden muss. Ein zusätzlicher Vorwiderstand 
+(33o Ohm) sorgt dafür, dass bei 20V die Verlustleistung nicht allein 
+an der Konstantstromquelle abfällt.
+
+#### Rührer
+
+Als Rührer kommt ein Selbstbau-Magnetrührer zum Einsatz, bestehend aus 
+einem kleinen PC-Lüfter mit aufgeklebten Neodym-Magnetwürfeln. Da Motoren selbst 
+Magnete besitzen, funktioniert das nur bei bestimmten Typen (vorher ausprobieren).
+
+Im Versuchsgefäß befindet sich ein handelsüblicher Labor-Magnetrührer 
+(sogenannter [Rührfisch](https://de.wikipedia.org/wiki/Magnetr%C3%BChrer)) 
+oder ein Selbstbau aus Schrumpfschlauch, Magnetwürfeln und Kleber.
+
+# Folgt demnächst ...
 
 ## Biologie
 
 * Planktonkultur
 * Nährmedien
-* Versuchsideen
+* Versuche und Ideen
 
-## Elektronik
-
-* Temperaturabhängigkeit von Sensor und Laserdiode
-* Bau eines Rührers
-* Spannungsversorgung von LED-Streifen
 
 ## Programmierung
 
@@ -244,6 +323,10 @@ void loop() {
 * Visualisierung mit R und Shiny
 
 ## Datenanalyse und Statistik
+
+* Datenmanagement
+* Plotten, Zeitreihen, Glättung
+* ANOVA-Beispiel
 
 
 
