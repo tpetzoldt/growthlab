@@ -32,7 +32,7 @@ Das hier vorgefundene Dokument stellt den jeweiligen Arbeitsstand dar.
 
 # LED-Streifen
 
-LED-Streufen sind in zahlreichen unterschiedlichen Versionen erhältlich, die sich durch Leistung, Lichtfarbe, und Versorgungsspannung unterscheiden. Die benötigte Leistung im Regelfall die durch Microcontroller wie Arduino oder ESP am doigitalen Pins erreichbaren Werte, außerdem beträgt die Versorgungsspannung oft 12 oder 24V und nicht 3.3 oder 5V wie beim Mikrocontroller. Es sind deshalb Bauteile zur Steuerung etwas höherer Deistungen erforderlich.
+LED-Streifen sind in zahlreichen unterschiedlichen Versionen erhältlich, die sich durch Leistung, Lichtfarbe, und Versorgungsspannung unterscheiden. Die benötigte Leistung ist im Regelfall höher, als die vom Arduino oder ESP am digitalen Pin erreichbaren Werte, außerdem beträgt die Versorgungsspannung oft 12 oder 24V und nicht 3.3 oder 5V wie beim Mikrocontroller. Es sind deshalb Bauteile zur Steuerung etwas höherer Deistungen erforderlich.
 
 Die folgende Anleitung beginnt zunächst mit der Steuerung von einfachen LEDs, anschließend wird das Experiment zur Steuerung etwas höherer Leistungen erweitert.
 
@@ -49,14 +49,14 @@ die LED  immer mit einem Vorwiderstand betrieben werden muss, sonst geht sie kap
 <img src="arduino-blink.png" alt="Schaltungsaufbau" width="500"/>
 
 
-Eine Detaillierte Einführung in die Mikrocontrollerprogrammierung würde den Rahmen dieses Projekts
+Eine detaillierte Einführung in die Mikrocontrollerprogrammierung würde den Rahmen dieses Projekts
 sprengen. Die Installation Arduino-IDE sowie erste Gehversuche sind auf diversen Internetseiten sehr ausführlich beschrieben, z.B. auf https://www.arduino.cc/en/Guide/HomePage
 
 
 ### Einfaches Blink-Beispiel
 
-Das Blink-Beispiel bringt zunächst die interne LED des Arduino zum blinken bringen, 
-anschließend soll eine externe LED an PIN 13 angesteuert werden. Das kürzere Pin der LED wird mit dem Minuspol (Masse) verbunden. Der längere Pin (Pluspol) wird über den Vorwiderstand (hier 300 Ohm) an Pin 13 des Arduino angeschlossen.
+Das Blink-Beispiel bringt zunächst die interne LED des Arduino zum blinken, 
+anschließend soll eine externe LED an PIN 13 angesteuert werden. Der kürzere Pin der LED wird mit dem Minuspol (Masse) verbunden. Der längere Pin (Pluspol) wird über den Vorwiderstand (hier 300 Ohm) an Pin 13 des Arduino angeschlossen.
 
 
 ```{c eval=FALSE}
@@ -85,8 +85,8 @@ void loop() {
 ### Blink ohne Delay
 
 Das folgende Beispiel verzichtet auf die "delay"-Funktion und verwendet stattdessen 
-den Millisekunden-Zähler der internen Quarzuhr des Arduino. Das ist zum einen genauer, andererseits
-wired der Programmfluss nicht durch "delay" unterbrochen. 
+den Millisekunden-Zähler der internen Quarzuhr des Arduino. Das ist genauer, außerdem
+wird der Programmfluss nicht durch "delay" unterbrochen. 
 Somit lassen sich parallel Messaufgaben durchführen oder weitere LEDs mit unterschiedlichem 
 Blinkintervall steuern.
 
