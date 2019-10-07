@@ -81,9 +81,19 @@ void setup() {
   pinMode(white, OUTPUT);
 }
 
-int i=0;
+int i=10;
 
 void loop() {
+
+  if (i < 2) {
+    digitalWrite(red, HIGH);
+    digitalWrite(white, LOW);
+    u8x8.drawString(14, 5, "*");
+  } else {
+    digitalWrite(red, LOW);
+    digitalWrite(white, HIGH);
+  }
+  
   uint16_t lux = LightSensor.GetLightIntensity();
 
   sensors.setWaitForConversion(false);
@@ -110,16 +120,7 @@ void loop() {
   u8x8.drawString(0, 5,"OD              "); //overwrite leftover chars
   u8x8.drawString(7, 5, String(turb).c_str());
 
-  if ((i % 5) < 2) {
-    digitalWrite(red, HIGH);
-    digitalWrite(white, LOW);
-    u8x8.drawString(14, 5, "*");
-  } else {
-    digitalWrite(red, LOW);
-    digitalWrite(white, HIGH);
-  }
-
   i++;
-  if (i > 20) i = 0;
+  if (i > 14) i = 0;
   delay(1000);
 }
