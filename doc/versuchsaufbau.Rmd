@@ -1,7 +1,7 @@
 ---
 title: "Versuchsaufbau"
 author: "Thomas Petzoldt"
-date: "2019-09-17"
+date: "2019-12-29"
 output: 
   html_document:
     numbersections: true
@@ -32,21 +32,17 @@ Bei entsprechend höherem Aufwand und Kosten für Mechanik, Optik und Elektronik
 ist eine Weiterentwicklung für Forschungszwecke denkbar, allerdings sind
 solche Geräte bereits kommerziell erhältlich.
 
-Im folgenden soll der Versuch, ausgehend von der Grundidee, schrittweise bis zur
+Im Folgenden soll der Versuch, ausgehend von der Grundidee, schrittweise bis zur
 Vollautomatisierung und zur Integration in ein Netzwerk (IoT -- Internet of Things)
 vorgestellt werden.
 
-Das hier vorgefundene Dokument stellt den jeweiligen Arbeitsstand dar.
+Das hier vorliegende Beschreibung stellt den jeweiligen Arbeitsstand dar.
 
 # Phytoplanktonkultur
 
-Im vorliegenden Fall wird eine Kultur der Grünalge *Scenedesmus* verwendet. Diese 
-Art ist sehr konkurrenzstark und kann unsteril kultiviert werden, was den Versuch sehr 
-erleichtert. Prinzipiell kann man auch eine sogenannte Verdrängungskultur aus einer
-Freilandprobe ansetzen.
+Für den Versuch wurde eine Laborkultur einer Grünalgenart aus derGattung *Scenedesmus* verwendet. Diese ist sehr konkurrenzstark und kann unsteril kultiviert werden, was den Versuch sehr erleichtert. Prinzipiell kann man auch eine sogenannte Verdrängungskultur aus einer Freilandprobe ansetzen.
 
-Als Nährlösung wird ein handelsüblicher mineralischer Blumendünger 
-benutzt. Hier kann man schon einmal das chemische Rechnen üben. Mehr dazu folgt später.
+Als Nährlösung wurde ein handelsüblicher mineralischer Blumendünger benutzt. Hier kann man schon einmal das chemische Rechnen üben. Mehr dazu folgt später.
 
 # Experiment 1 
 
@@ -54,15 +50,13 @@ benutzt. Hier kann man schon einmal das chemische Rechnen üben. Mehr dazu folgt
 
 Die einfachste Aufbaustufe zeigt bereits das Grundprinzip. Die Messtrecke wird durch eine
 LED und ein Photowiderstand gebildet, die an einem
-Gestell befestigt sind. Das Gestell besteht im vorliegenden Fall aus einer Sperrholzgrundplatte, 
-Gewindestangen (M4) und etwas Plexiglas, könnte im Prinzip aber auch aus dem Lego- oder Metallbaukasten stammen.
+einfachen Gestell befestigt sind. Das Gestell besteht aus einer Sperrholzgrundplatte, 
+Gewindestangen (M4) und etwas Plexiglas, es könnte im Prinzip aber auch aus einem Lego- oder Metallbaukasten stammen.
 
-Als elektronische Bauelemente genügen neben der LED und dem Photowiderstand ein sogenanntes *Breadboard* (Steckbrett),
-2 Widerstände, Steckbrücken bzw. etwas Draht und ein Voltmeter. Da nur Spannung gemessen werden muss, genügt ein preiswertes Gerät. Zur LED ist zu sagen, dass es sich hier um eine günstige Laser-LED (ähnlich einem Laserpointer) handelt. 
-Diese besitzt sogar eine kleine Linse zur Fokussierung. Grundsätzlich sind auch andere LEDs geeignet. Wichtig ist, dass
-eine LED fast immer mit einem Vorwiderstand oder einer Konstantstromquelle (siehe unten) betrieben werden muss, sonst geht sie kaputt. Laser-LEDs sind besonders empfindlich.
+Als elektronische Bauelemente genügen neben der LED und dem Photowiderstand ein sogenanntes *Breadboard* (Steckbrett), 2 Widerstände, Steckbrücken bzw. etwas Draht und ein Voltmeter. Da nur Spannung gemessen werden muss, genügt ein preiswertes Gerät. Bei der LEDhandelt es sich um eine günstige rote Laser-LED, ähnlich einem Laserpointer. 
+Die Laser-LED besitzt sogar eine kleine Linse zur Fokussierung. Grundsätzlich sind auch andere LEDs geeignet. Wichtig ist, dass eine LED fast immer mit einem Vorwiderstand oder einer Konstantstromquelle (siehe unten) betrieben werden muss, sonst geht sie kaputt. Laser-LEDs sind besonders empfindlich.
 
-**Vorsicht:** Das man einen Laser nicht auf die Augen oder auf spiegelnde Flächen 
+**Vorsicht:** Dass man einen Laser nicht auf die Augen oder auf spiegelnde Flächen 
 richtet, sollte selbstverständlich sein. Achtung: auch die Flasche kann spiegeln!
 
 Die grüne Farbe der Probe zeigt eine hohe Konzentration gegen Ende eines 
@@ -81,7 +75,7 @@ Wachstumsversuchs.
 
 ### Schaltung
 
-Die Schaltung (rechts) zeigt für die LED den Vorwiderstand und für den Photowiderstand 
+Die Schaltung (rechts) zeigt die LED mit Vorwiderstand und für den Photowiderstand 
 den typischen Aufbau einer Spannungsteilers. Spannungen lassen sich grundsätzlich 
 einfacher und genauer messen als Ströme. Es empfiehlt sich, die Schaltung zunächst 
 auf dem Steckbrett aufzubauen. Wenn alles funktioniert, werden LED und Photowiderstand 
@@ -107,7 +101,7 @@ Schaltung bleibt gleich. Die USB-Verbindung mit einem Computer hat eine dreifach
 ### Der Code
 
 Eine Detaillierte Einführung in die Mikrocontrollerprogrammierung würde den Rahmen dieses Projekts
-sprengen. Die Installation Arduino-IDE sowie erste Gehversuche sind auf diversen Internetseiten sehr ausführlich beschrieben, z.B. auf https://www.arduino.cc/en/Guide/HomePage
+übersteigen Die Installation Arduino-IDE sowie erste Gehversuche sind auf diversen Internetseiten sehr ausführlich beschrieben, z.B. auf https://www.arduino.cc/en/Guide/HomePage
 
 Wenn man die IDE installiert hat und das Blink-Beispiel funktioniert, kann man 
 sich bereits and das unten stehende Beispiel trauen. Die Messwerte des Sensors 
@@ -155,12 +149,10 @@ mit den dazugeörigen Beispielen einzeln ausprobieren.
 
 Die Abbildungen zeigen oben ein Foto (ohne die Laserdiodenschaltung) 
 und unten den kompletten Schaltungsaufbau auf dem Breadboard. Zur Vermeidung von Kabelsalat
-wurde der Sensor an ein Flachbandkabel gelötet. Für den Anschluss an den Arduino dienen vier 
-Adern eines Dupont-Jumperkabels. Im Foto wurde im Interesse der Übersicht die 
+wurde der Sensor an ein Flachbandkabel gelötet. Für den Anschluss an den Arduino dienen 
+vier Adern eines Dupont-Jumperkabels. Im Foto wurde im Interesse der Übersicht die 
 Laserdiodenschaltung weggelassen. Der Versuchsaufbau lässt sich auch als behelfsmäßiges
-Luxmeter einsetzen. Man beachte, dass die Stromversorgung über ein Netzteil erfolgen kann 
-(runde Buchse) und nicht über USB, d.h. die Schaltung ist nach der Programmierung
-autark ohne Computer lauffähig.
+Luxmeter einsetzen. Man beachte, dass die Stromversorgung über ein Netzteil oder eine Batterie erfolgen kann  (runde Buchse) und nicht über USB, d.h. die Schaltung ist nach der Programmierung autark ohne Computer lauffähig.
 
 ### Der Code
 
@@ -275,29 +267,28 @@ Diese unterschiedlichen Anforderungen wurden wie folgt gelöst.
 
 * 5V: der ESP32 wird über seinen USB-Eingang mit 5V aus einem Handynetzteil versorgt. 
   Der interne Spannungsregler des "Dev Boards" stellt daraus die 3.3V her.
-* 3.3V: Die Sensoren (Photowiderstand, temperatursensoren) müssen mit dem selben 
+* 3.3V: Die Sensoren (Photowiderstand, Temperatursensoren) müssen mit dem selben 
 Pegel arbeiten wie der ESP. Die dafür benötigte Spannung wird vom 3.3V-Ausgang 
 des "Dev Boards" abgezweigt.
 * 12V bzw. 24V: Hierzu wird ein kleines aber sehr effizientes Transformatormodul
 benutzt (MT3608 DC-DC Step up Modul, auf dem Foto die kleinere Platine). 
-Mit Hilfe eines Einstellpotentiometers (blaues bauteil auf der Platine) 
-lässt sich die gewünschte Ausgangsspannung einstellen. Je nach Leistungsfähigkeit der Handy-Netzteils und der maximalen Leistungsaufnahme des LED-Streifens kann die volle Leistung eventuell nicht ganz abgerufen werden, damit für den ESP und die anderen bauteile genügend Strom übrigbleibt. Im vorliegenden Fall wird der 24V-LED-Streifen nur mit 20V betrieben.
+Mit Hilfe eines Einstellpotentiometers (blaues Bauteil auf der Platine) 
+lässt sich die gewünschte Ausgangsspannung einstellen. Je nach Leistungsfähigkeit der Handy-Netzteils und der maximalen Leistungsaufnahme des LED-Streifens kann die volle Leistung eventuell nicht ganz abgerufen werden, damit für den ESP und die anderen Bauteile genügend Strom übrigbleibt. Im vorliegenden Fall wird der 24V-LED-Streifen nur mit 20V betrieben.
 
 Details sind dem Schaltplan und der folgenden Erläuterung zu entnehmen.
 
-#### Strom
+#### Stromstärke
 
 Motoren und LEDs benötigen eventuell mehr Strom (und ggf. eine andere Spannung) 
 als der ESP32 von sich aus bereitstellen kann. Prinzipiell kann man das mit Relais lösen.
-Als energiesparendere (und billigere) Alternative wurden für diesen Zweck Transistoren verwendet,
-konkret MOSFETS vom Typ IRLZ24N. Sie bieten für den verwendungszweck genügend Leistungsreserven.
+Als energiesparendere (und billigere) Alternative wurden für diesen Zweck Transistoren verwendet, konkret MOSFETS vom Typ IRLZ24N, oder ein ähnlicher Typ. Sie bieten für den verwendungszweck genügend Leistungsreserven.
 
-Mit Hilfe der MOSFETs lassen sich die jeweils benötigten Spannungen schalten.
+Mit Hilfe der MOSFETs lassen sich die jeweils benötigten Spannungen und Ströme schalten.
 
 #### Temperaturabhängigkeit
 
 Laser-LEDs sind stark temperaturabhängig. Bei einem ersten Versuch kam es trotz 
-temperiertem Raum zu relativ starken Schwankungen des Messignals. Eine vorgeschaltete
+temperiertem Raum zu relativ starken Schwankungen des Messsignals. Eine vorgeschaltete
 Konstantstromquelle (CL2N3-G, 20mA, 0.6W) konnte die Temperaturabhängigkeit sehr stark vermindern.
 Das Bauteil hat 2 beschaltete Pins und wird einfach in Reihe zum Laser eingefügt. 
 Da am Bauteil jedoch immer ein gewisser Spannungsabfall stattfindet, benötigt 
@@ -316,9 +307,13 @@ Im Versuchsgefäß befindet sich ein handelsüblicher Labor-Magnetrührer
 (sogenannter [Rührfisch](https://de.wikipedia.org/wiki/Magnetr%C3%BChrer)) 
 oder ein Selbstbau aus Schrumpfschlauch, Magnetwürfeln und Kleber.
 
+Alternativ kann man auch einen Rührer von oben bauen, z.B. aus einem kleinen Motor und dem Stempel einer Einwegspritze, oder eine Belüftung mit Hilfe einer Niederspannungs-Aquarienpumpe.
+
 # Folgt demnächst ...
 
 ## Organismen und Nährmedien
+
+
 
 * Planktonkultur
 * Nährmedien
