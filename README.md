@@ -23,6 +23,7 @@ Ausführliche Dokumentation auf:
 https://tpetzoldt.github.io/growthlab
 
 * Versuchsaufbau: https://tpetzoldt.github.io/growthlab/doc/versuchsaufbau.html
+* Poster: https://tpetzoldt.github.io/growthlab/doc/petzoldt_dgl_2019_public.pdf
 
 Literatur
 
