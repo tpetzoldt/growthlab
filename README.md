@@ -4,7 +4,7 @@
 
 ## Real and virtual growth experiments for highschool and university students
 
-Note to English speaking people: This repository is partly in German to support use by private persons and in schools.
+Note to English speaking people: This repository is partly in German to support use by private persons and in schools in Germany.
 
 Wachstums- und Verlustprozesse spielen in den ökologischen Wissenschaften eine entscheidende Rolle, nicht nur bei Symbolarten wie dem amerikanischen Bison [1], sondern auch bei Bakterien, beim Phytoplankton oder bei Fischen. Biologische Systeme besitzen eine vielfältige Dynamik und sind häufig komplex und rückgekoppelt, Simulationen und Experimente tragen zum Verständnis bei.
 
