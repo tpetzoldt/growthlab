@@ -12,7 +12,7 @@ Das Repository ist eine lose Sammlung von Codes und Beschreibungen realer und vi
 
 Mit Hilfe von Flaschenversuchen wird das Populationswachstum einer Mikroalgenkultur beobachtet, z.B. von Scenedesmus. Die Messeinrichtung besteht aus kostengünstigen Bauteilen und eignet sich für Praktikumsversuche, Schulexperimente und Hobbyforscher. Das Grundprinzip ist ein Gestell mit roter Laserdiode, einem Fotowiderstand und einem Temperatursensor sowie einer LED-Beleuchtung und einem selbstgebauten Magnetrührer. Für die Stromversorgung genügt ein 5V-USB-Netzteil, z.B. von einem Handy. Die Messung kann direkt in der Flasche erfolgen, ohne den Versuch zu unterbrechen.
 
-Die optische Dichte der Planktonkultur wird im einfachsten Fall manuell mit einem Voltmeter gemessen. In der vollen Ausbaustufe erfolgt die Messung mit einem WLAN-fähigen Mikrocontroller (Espressif ESP32), der gleichzeitig Beleuchtung und Rührer steuert, die Temperatur überwacht und die Daten an einen Server (z.B. einen Raspberry Pi „Bastelcomputer“) oder einen Cloudservice überträgt.
+Die optische Dichte der Planktonkultur wird im einfachsten Fall manuell mit einem Voltmeter gemessen. In der vollen Ausbaustufe erfolgt die Messung mit einem WLAN-fähigen Mikrocontroller (Espressif ESP32), der gleichzeitig Beleuchtung und Rührer steuert, die Temperatur überwacht und die Daten an einen Server (z.B. einen Raspberry Pi "Bastelcomputer") oder einen Cloudservice überträgt.
 
 Je nach Ausbaustufe ist das Experiment sehr einfach und erfordert weder Programmierung noch den Umgang mit einem Lötkolben. Im größeren Maßstab kann es ein fächerübergreifendes „Maker-Projekt“ (siehe [1,2]) für Teams werden: mechanischer Aufbau der Versuchsanordnung, Aufbau einer Schaltung, Mikrocontroller-Programmierung, Datenübertragung („Internet of Things“), Finden und Kennenlernen geeigneter Organismen, mikroskopische oder fotometrische Kalibrierung, Herstellen von Kulturmedien, Datenbankstruktur, statistische Datenanalyse und mechanistische Modellierung.
 
@@ -26,7 +26,7 @@ Ausführliche Dokumentation auf https://tpetzoldt.github.io/growthlab
 
 Literatur
 
-[1] Snider, S. B. & Brimlow, J. N. (2013) An Introduction to Population Growth. Nature Education Knowledge 4(4):3 https://www.nature.com/scitable/knowledge/library/an-introduction-to-population-growth-84225544/
+[1] Snider, S. B. & Brimlow, J. N. (2013) An Introduction to Population Growth. Nature Education Knowledge 4(4):3 https://www.nature.com/scitable/knowledge/library/an-introduction-to-population-growth-84225544/ abgerufen am 2020-02-12
 
 [2] Obama, B. (2014) Nation of Makers. https://obamawhitehouse.archives.gov/nation-of-makers abgerufen am 2019-05-28
 
