@@ -18,12 +18,11 @@ Je nach Ausbaustufe ist das Experiment sehr einfach und erfordert weder Programm
 
 Der Versuchsaufbau wurde im Rahmen eines Schülerpraktikums (Gymnasium 11. Klasse) entwickelt. Die gewonnen Daten werden in Kursen zu ökologischer Statistik und Modellierung verwendet.
 
-Ausführliche Dokumentation auf:
-
-https://tpetzoldt.github.io/growthlab
+Ausführliche Dokumentation auf https://tpetzoldt.github.io/growthlab
 
 * Versuchsaufbau: https://tpetzoldt.github.io/growthlab/doc/versuchsaufbau.html
 * Poster: https://tpetzoldt.github.io/growthlab/doc/petzoldt_dgl_2019_public.pdf
+* Code-Beispiele: https://github.com/tpetzoldt/growthlab/src/
 
 Literatur
 
@@ -33,4 +32,4 @@ Literatur
 
 [3] Wikipedia (2019) Makerbewegung. https://de.wikipedia.org/wiki/Maker abgerufen am 2019-05-28
 
-[tpetzoldt](https://github.com/tpetzoldt)
+Autor: [tpetzoldt](https://github.com/tpetzoldt)
