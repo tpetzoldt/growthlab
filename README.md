@@ -21,7 +21,7 @@ Der Versuchsaufbau wurde im Rahmen eines Schülerpraktikums (Gymnasium 11. Klass
 Ausführliche Dokumentation auf https://tpetzoldt.github.io/growthlab
 
 * Versuchsaufbau: https://tpetzoldt.github.io/growthlab/doc/versuchsaufbau.html
-* Poster: https://tpetzoldt.github.io/growthlab/doc/petzoldt_dgl_2019_public.pdf
+* Poster: https://tpetzoldt.github.io/growthlab/doc/petzoldt_belger_2019.pdf
 * Code-Beispiele: https://github.com/tpetzoldt/growthlab/tree/master/src
 
 Literatur
