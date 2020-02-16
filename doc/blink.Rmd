@@ -32,7 +32,7 @@ Das hier vorgefundene Dokument stellt den jeweiligen Arbeitsstand dar.
 
 # LED-Streifen
 
-LED-Streifen sind in zahlreichen unterschiedlichen Versionen erhältlich, die sich durch Leistung, Lichtfarbe, und Versorgungsspannung unterscheiden. Die benötigte Leistung ist im Regelfall höher, als die vom Arduino oder ESP am digitalen Pin erreichbaren Werte, außerdem beträgt die Versorgungsspannung oft 12 oder 24V und nicht 3.3 oder 5V wie beim Mikrocontroller. Es sind deshalb Bauteile zur Steuerung etwas höherer Deistungen erforderlich.
+LED-Streifen sind in zahlreichen unterschiedlichen Versionen erhältlich, die sich durch Leistung, Lichtfarbe, und Versorgungsspannung unterscheiden. Die benötigte Leistung ist im Regelfall höher, als die vom Arduino oder ESP am digitalen Pin erreichbaren Werte, außerdem beträgt die Versorgungsspannung oft 12 oder 24V und nicht 3.3 oder 5V wie beim Mikrocontroller. Es sind deshalb Bauteile zur Steuerung etwas höherer Leistungen erforderlich.
 
 Die folgende Anleitung beginnt zunächst mit der Steuerung von einfachen LEDs, anschließend wird das Experiment zur Steuerung etwas höherer Leistungen erweitert.
 
@@ -43,7 +43,7 @@ Die einfachste Aufbaustufe zeigt bereits das Grundprinzip.
 
 Als elektronische Bauelemente genügen neben der LED und dem Arduino ein sogenanntes *Breadboard* (Steckbrett),
 1 Widerstand, 1 LED und ein paar Steckbrücken oder Basteldraht (0.5mm Durchmesser). Wichtig ist, dass
-die LED  immer mit einem Vorwiderstand betrieben werden muss, sonst geht sie kaputt.
+die LED immer mit einem Vorwiderstand betrieben werden muss, sonst geht sie kaputt.
 
 
 <img src="arduino-blink.png" alt="Schaltungsaufbau" width="500"/>
@@ -163,14 +163,42 @@ das Programm Fritzing (https://fritzing.org). Die App wird zwar leider nicht meh
 
 ### Arduino steuert LED-Streifen
 
-Für das folgende Experiment benötigen wir ein kurzes Stück eines LED-STreifens (24 V), 
-ein DC-DC-Wandlermodul (Step-up Modul MT 3808) und einen Mosfet-Transistor (z.B- IRLZ 24N).
+Für das folgende Experiment benötigen wir ein kurzes Stück eines LED-Streifens (24 V), 
+ein DC-DC-Wandlermodul (Step-up Modul MT 3608) und einen Mosfet-Transistor (z.B- IRLZ 24N).
 
-Die detaillierte Beschreibung der Schaltung muss noch geschrieben werden ...
+Das DC-DC-Wandlermodul konvertiert die Spannung des Arduino (5V) in die vom 
+LED-Streifen benötigten 24V (bzw. 12 V, je nach Typ). Hierzu verbinden wir 
+In- und In+ des Moduls mit Masse und 5V-Leitung des Arduino (blaue bzw. rote Leitung).
+
+Mit Hilfe der kleinen Schraube des Einstellreglers und einem Voltmeter stellen 
+wir die benötigte Ausgangsspannung ein. Achtung, bei einem neuen Modul muss man 
+meistens zunächst 20 Umdrehungen gegen den Uhrzeigersinn drehen, bis etwas passiert.
+
+Der Mosfet-Transistor funktioniert als elektronischer Schalter, d.h. die 5V des 
+Arduino (weiße Leitung) schalten die höhere Spannung für den LED-Streifen.
+Im vorliegenden Beispiel sind die 24V direkt mit dem LED-Streifen verbunden und 
+der Transistor schaltet die Masseleitung (blau bzw. grün). Alternativ kann man 
+auch die Spannungsleitung schalten.
 
 <img src="arduino-blink-ledstrip.jpg" alt="Arduino steuert LED-Streifen" width="400"/>
 
+### Wichtige Hinweise:
 
+* Beim Arbeiten mit verschiedenen Spannungen muss genau darauf geachtet werden, 
+dass weder der Arduino noch die LED-Streifen und auf keinen Fall der PC eine 
+Überspannung erhalten, ansonsten können die Bauteile "durchbrennen".
+* **Solange die Schaltung mit dem PC verbunden ist: rote Leitung herausziehen!**
+Zum Schutz des Computers sollte man den Step-Up-Regler unbedingt abtrennen, 
+solange das USB-Kabel mit dem PC verbunden ist. 
+* Den Arduino versorgt man nach Abtrennung der USB-Verbindung über die runde Buchse 
+mit einem 9V-Netzteil.
+* Bei der Verwendung von LED-Streifen muss die Gesamtlast berücksichtigt werden: 
+Netzteil, Arduino-Spannungsregler und MT 3608 besitzen eine begrenzte Leistungsfähigkeit. 
+Die maximale Ausgangsstromstärke des MT 3608 beträgt 2A, die maximale Stromstärke 
+von USB 2.0 nur 500 mA bei 5V.
+* Bei größeren LED-Streifen sollte man die Spannung besser dem Vin-Pin 
+entnehmen (direkt vom Netzteil statt über den 5V-Regler des Arduino) oder ein 
+separates Netzteil verwenden, siehe z.B. https://forum.arduino.cc/index.php?topic=380336.15 
 
 ----
 
