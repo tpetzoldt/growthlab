@@ -40,7 +40,7 @@ Das hier vorliegende Beschreibung stellt den jeweiligen Arbeitsstand dar.
 
 # Phytoplanktonkultur
 
-Für den Versuch wurde eine Laborkultur einer Grünalgenart aus derGattung *Scenedesmus* verwendet. Diese ist sehr konkurrenzstark und kann unsteril kultiviert werden, was den Versuch sehr erleichtert. Prinzipiell kann man auch eine sogenannte Verdrängungskultur aus einer Freilandprobe ansetzen.
+Für den Versuch wurde eine Laborkultur einer Grünalgenart aus der Gattung *Scenedesmus* verwendet. Diese ist sehr konkurrenzstark und kann unsteril kultiviert werden, was den Versuch sehr erleichtert. Prinzipiell kann man auch eine sogenannte Verdrängungskultur aus einer Freilandprobe ansetzen.
 
 Als Nährlösung wurde ein handelsüblicher mineralischer Blumendünger benutzt. Hier kann man schon einmal das chemische Rechnen üben. Mehr dazu folgt später.
 
