@@ -16,13 +16,26 @@ Die optische Dichte der Planktonkultur wird im einfachsten Fall manuell mit eine
 
 Je nach Ausbaustufe ist das Experiment sehr einfach und erfordert weder Programmierung noch den Umgang mit einem Lötkolben. Im größeren Maßstab kann es ein fächerübergreifendes „Maker-Projekt“ (siehe [1,2]) für Teams werden: mechanischer Aufbau der Versuchsanordnung, Aufbau einer Schaltung, Mikrocontroller-Programmierung, Datenübertragung („Internet of Things“), Finden und Kennenlernen geeigneter Organismen, mikroskopische oder fotometrische Kalibrierung, Herstellen von Kulturmedien, Datenbankstruktur, statistische Datenanalyse und mechanistische Modellierung.
 
-Der Versuchsaufbau wurde im Rahmen eines Schülerpraktikums (Gymnasium 11. Klasse) entwickelt. Die gewonnen Daten werden in Kursen zu ökologischer Statistik und Modellierung verwendet.
+Der Versuchsaufbau wurde im Rahmen von Schülerpraktikua (Gymnasium 11. und 12. Klasse) entwickelt. Die gewonnen Daten werden in Kursen zu ökologischer Statistik und Modellierung verwendet.
 
 Ausführliche Dokumentation auf https://tpetzoldt.github.io/growthlab
 
-* Versuchsaufbau: https://tpetzoldt.github.io/growthlab/doc/versuchsaufbau.html
-* Poster: https://tpetzoldt.github.io/growthlab/doc/petzoldt_belger_2019.pdf
-* Code-Beispiele: https://github.com/tpetzoldt/growthlab/tree/master/src
+
+### Grundideen
+
+* [Ein Arduino steuert das Licht](doc/blink.html)
+* [Versuchsaufbau: Steuerung, Sensoren, Daten](doc/versuchsaufbau.html)
+
+### Schülerprojekte
+
+* [Jugend Forsch-Projekt 2019/2020 -- Wachstumsversuche:](doc/petzoldt_belger_2019.pdf) Experimente zur Messung des Wachstums einer Phytoplanktonpopulation
+* [Jugend Forscht-Projekt 2020/2021 -- Algenlogger:](doc/algenlogger.html) Versuchsoptimierung, Kalibrierung und Langzeitexperimente
+
+
+
+### Quelltexte, Software und Bilder
+
+* [Software-Repository](https://github.com/tpetzoldt/growthlab/)
 
 Literatur
 
