@@ -16,20 +16,20 @@ Die optische Dichte der Planktonkultur wird im einfachsten Fall manuell mit eine
 
 Je nach Ausbaustufe ist das Experiment sehr einfach und erfordert weder Programmierung noch den Umgang mit einem Lötkolben. Im größeren Maßstab kann es ein fächerübergreifendes „Maker-Projekt“ (siehe [1,2]) für Teams werden: mechanischer Aufbau der Versuchsanordnung, Aufbau einer Schaltung, Mikrocontroller-Programmierung, Datenübertragung („Internet of Things“), Finden und Kennenlernen geeigneter Organismen, mikroskopische oder fotometrische Kalibrierung, Herstellen von Kulturmedien, Datenbankstruktur, statistische Datenanalyse und mechanistische Modellierung.
 
-Der Versuchsaufbau wurde im Rahmen von Schülerpraktikua (Gymnasium 11. und 12. Klasse) entwickelt. Die gewonnen Daten werden in Kursen zu ökologischer Statistik und Modellierung verwendet.
+Der Versuchsaufbau wurde im Rahmen von Schülerpraktika (Gymnasium 11. und 12. Klasse) entwickelt. Die gewonnen Daten werden in Kursen zu ökologischer Statistik und Modellierung verwendet.
 
 Ausführliche Dokumentation auf https://tpetzoldt.github.io/growthlab
 
 
 ### Grundideen
 
-* [Ein Arduino steuert das Licht](doc/blink.html)
-* [Versuchsaufbau: Steuerung, Sensoren, Daten](doc/versuchsaufbau.html)
+* [Ein Arduino steuert das Licht](https://tpetzoldt.github.io/growthlab/doc/blink.html)
+* [Versuchsaufbau: Steuerung, Sensoren, Daten](https://tpetzoldt.github.io/growthlab/doc/versuchsaufbau.html)
 
 ### Schülerprojekte
 
-* [Jugend Forsch-Projekt 2019/2020 -- Wachstumsversuche:](doc/petzoldt_belger_2019.pdf) Experimente zur Messung des Wachstums einer Phytoplanktonpopulation
-* [Jugend Forscht-Projekt 2020/2021 -- Algenlogger:](doc/algenlogger.html) Versuchsoptimierung, Kalibrierung und Langzeitexperimente
+* [Jugend Forsch-Projekt 2019/2020 -- Wachstumsversuche:](https://tpetzoldt.github.io/growthlab/doc/petzoldt_belger_2019.pdf) Experimente zur Messung des Wachstums einer Phytoplanktonpopulation
+* [Jugend Forscht-Projekt 2020/2021 -- Algenlogger:](https://tpetzoldt.github.io/growthlab/doc/algenlogger.html) Versuchsoptimierung, Kalibrierung und Langzeitexperimente
 
 
 
@@ -37,7 +37,7 @@ Ausführliche Dokumentation auf https://tpetzoldt.github.io/growthlab
 
 * [Software-Repository](https://github.com/tpetzoldt/growthlab/)
 
-Literatur
+### Literatur
 
 [1] Snider, S. B. & Brimlow, J. N. (2013) An Introduction to Population Growth. Nature Education Knowledge 4(4):3 https://www.nature.com/scitable/knowledge/library/an-introduction-to-population-growth-84225544/ abgerufen am 2020-02-12
 
