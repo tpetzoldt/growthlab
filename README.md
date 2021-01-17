@@ -28,7 +28,7 @@ Ausführliche Dokumentation auf https://tpetzoldt.github.io/growthlab
 
 ### Schülerprojekte
 
-* [Jugend Forsch-Projekt 2019/2020 -- Wachstumsversuche:](https://tpetzoldt.github.io/growthlab/doc/petzoldt_belger_2019.pdf) Experimente zur Messung des Wachstums einer Phytoplanktonpopulation
+* [Jugend Forscht-Projekt 2019/2020 -- Wachstumsversuche:](https://tpetzoldt.github.io/growthlab/doc/petzoldt_belger_2019.pdf) Experimente zur Messung des Wachstums einer Phytoplanktonpopulation
 * [Jugend Forscht-Projekt 2020/2021 -- Algenlogger:](https://tpetzoldt.github.io/growthlab/doc/algenlogger.html) Versuchsoptimierung, Kalibrierung und Langzeitexperimente
 
 
