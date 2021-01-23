@@ -27,18 +27,22 @@ In diesem Experiment wurden drei baugleiche Apparaturen konstruiert. Diese sind 
 Verwendet wurden leicht erwerbbare Materialen, wie beispielsweise eine Grundplatte aus Sperrholz, Gewindestäbe und Muttern sowie Polystyrol als Standplatte für die Laborflasche mit der Algenprobe.
 
 ## Technik
-Als technische Bauteile wurden handlesübliche sowie preisgünstige Geräte verwendet. Auf dem Steckbrett unten zeigt die Anordnung dieser.
+Als technische Bauteile wurden handlesübliche sowie preisgünstige Geräte verwendet. Auf dem Steckbrett unten zeigt die Anordnung. Die Step-Down-Module transferieren die Netzteilspannung in die jeweils benötigte Spannung. Somit wurde den LED-Streifen mit dem rechten Modul eine Spannung von ca. 18V bereitgestellt. Die restlichen Bauteile wurden mit  7,75V betrieben.
 
 ![über Mikrocontroller gesteuerte Bauteile](Controller_Steckbrett.jpg)
 Tabelle mit genauer Bezeichnung und Grund der Verwendung einfügen
 
 ![Steckbrett der Step-Down-Module](step_up_Modul_Steckbrett.jpg)
 
-Die Step-Down-Module transferieren die Netzteilspannung in die jeweils benötigte Spannung. Somit wurde den LED-Streifen mit dem rechten Modul eine Spannung von ca. 18V bereitgestellt. Die restlichen Bauteile wurden mit  7,75V betrieben.
 
-Mit Fritzing wurde die Steckbrettanordnung digitalisiert, sodass bereits fertig verdrahtete Steckbretter bestellt werden könnten. In diesem Fall spart man sich das zeitintensive Verdrahten.   
 
-![Schaltplan (erstellt mit fritzing)](Hauptsteckbrett_Steckplatine_fritzing.png) 
+## Schaltplan
+
+Die Steckbrettanordnung wurde mit dem Programm [**fritzing**](https://fritzing.org/) digitalisiert, das ebenfalls auf [Github](https://github.com/fritzing/fritzing-app) frei verfügbar ist. 
+
+![Steckbrettanordnung, erstellt mit **fritzing**. 
+Der [**fritzing**-Entwurf](https://github.com/tpetzoldt/growthlab/blob/master/circuits/algenlogger_hauptsteckbrett.fzz)  kann für eigene Erweiterungen angepasst werden.
+](Hauptsteckbrett_Steckplatine_fritzing.png) 
 
 ## Software
 
@@ -75,6 +79,13 @@ Auch weiterführende Begriffe, wie Wachstumsrate und Verdopplungzeit lassen sich
 Das untenstehende Diagramm zeigt beispielhaft die Wachstumsrate. Auch hier lassen sich die Beobachtungen des zweiten Wachstumsdiagramms bestätigen. Mit zunehmender Zeit sinkt die Wachstumsrate; die Algen wachsen somit zunehmend langsamer. Schließlich fällt die Wachstumsrate unter Null, die Probe ist gekippt. 
 
 ![Wachstumsrate](Wachstumsrate.png)
+
+## Literatur und Internetquellen
+
+Morgenstern, K. (2019) Fritzing, Electronics made easy. https://fritzing.org/ abgerufen am 2021-01-23
+
+[Fritzing-Entwurf der Steckbrettanordnung](https://github.com/tpetzoldt/growthlab/blob/master/circuits/algenlogger_hauptsteckbrett.fzz)
+
 <hr></hr>
 
 Diese Anleitung entstand im Rahmen von [Jugend Forscht](
@@ -82,3 +93,5 @@ Home - Stiftung Jugend forscht e. V.
 www.jugend-forscht.de) (2021): Saramaria Schreib
 (Autorin), Thomas Petzoldt (Betreuer, Maintainer). Das Dokument, Fotos, 
 Skripte und Daten stehen unter der [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)- Lizenz.
+
+
