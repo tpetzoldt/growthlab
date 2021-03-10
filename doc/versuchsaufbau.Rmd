@@ -311,9 +311,11 @@ Alternativ kann man auch einen Rührer von oben bauen, z.B. aus einem kleinen Mo
 
 ## Organismen und Nährmedien
 
-* Planktonkultur
-* Nährmedien
-* Lichtregime
+* Planktonkultur: Untersuchung unterschiedlicher Algenarten
+* Nährmedien: In welchem Nährmedium wachsen die Algen am besten
+* Lichtregime: Wachstum bei Dauerlicht und im Tag-Nacht-Rhythmus
+* Verbesserung von Mechanik, Optik und Elektronik
+* Verbesserung der Software
 
 
 ## Datenanalyse und Statistik
@@ -322,6 +324,7 @@ Alternativ kann man auch einen Rührer von oben bauen, z.B. aus einem kleinen Mo
 * Kalibrierung
 * Plotten, Zeitreihen, Glättung
 * ANOVA-Beispiel
+* Webseite zum Nachmachen
 
 ## Zusätzliche Programme und Scripte
 
