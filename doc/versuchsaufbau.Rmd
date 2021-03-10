@@ -1,7 +1,7 @@
 ---
 title: "Versuchsaufbau"
 author: "Thomas Petzoldt"
-date: "2019-12-29"
+date: "2021-03-10"
 output: 
   html_document:
     numbersections: true
@@ -25,7 +25,7 @@ der Flasche gemessen werden. Das ist zwar optisch ungünstiger als eine
 Küvette, ermöglicht aber Messungen in geschlossenen Kolben oder Flaschen.
 
 Je nach Ausbaustufe kann die Messung manuell erfolgen oder mit einem Mikrocontroller.
-Dieser erlaubt dann auch weitere Steuerungsaufgaben, z.B. Licht und Rührer.
+Dieser erlaubt gleichzeitig weitere Steuerungsaufgaben, z.B. Licht und Rührer.
 
 Das Experiment ist als Schüler-, Studien- und Praktikumsexperiment vorgesehen. 
 Bei entsprechend höherem Aufwand und Kosten für Mechanik, Optik und Elektronik 
@@ -36,7 +36,7 @@ Im Folgenden soll der Versuch, ausgehend von der Grundidee, schrittweise bis zur
 Vollautomatisierung und zur Integration in ein Netzwerk (IoT -- Internet of Things)
 vorgestellt werden.
 
-Das hier vorliegende Beschreibung stellt den jeweiligen Arbeitsstand dar.
+Die hier vorliegende Beschreibung stellt den jeweiligen Arbeitsstand dar.
 
 # Phytoplanktonkultur
 
@@ -54,7 +54,7 @@ einfachen Gestell befestigt sind. Das Gestell besteht aus einer Sperrholzgrundpl
 Gewindestangen (M4) und etwas Plexiglas, es könnte im Prinzip aber auch aus einem Lego- oder Metallbaukasten stammen.
 
 Als elektronische Bauelemente genügen neben der LED und dem Photowiderstand ein sogenanntes *Breadboard* (Steckbrett), 2 Widerstände, Steckbrücken bzw. etwas Draht und ein Voltmeter. Da nur Spannung gemessen werden muss, genügt ein preiswertes Gerät. Bei der LEDhandelt es sich um eine günstige rote Laser-LED, ähnlich einem Laserpointer. 
-Die Laser-LED besitzt sogar eine kleine Linse zur Fokussierung. Grundsätzlich sind auch andere LEDs geeignet. Wichtig ist, dass eine LED fast immer mit einem Vorwiderstand oder einer Konstantstromquelle (siehe unten) betrieben werden muss, sonst geht sie kaputt. Laser-LEDs sind besonders empfindlich.
+Die Laser-LED besitzt sogar eine kleine Linse zur Fokussierung. Grundsätzlich sind auch andere LEDs geeignet. Wichtig ist, dass eine LED immer mit einem Vorwiderstand oder einer Konstantstromquelle (siehe unten) betrieben werden muss, sonst geht sie kaputt. Laser-LEDs sind besonders empfindlich.
 
 **Vorsicht:** Dass man einen Laser nicht auf die Augen oder auf spiegelnde Flächen 
 richtet, sollte selbstverständlich sein. Achtung: auch die Flasche kann spiegeln!
@@ -85,8 +85,7 @@ mit längeren Leitungen versehen und am Gestell befestigt.
 
 ### Messung mit einem Arduino Uno
 
-Der [Arduino Uno](https://www.arduino.cc) und seine kompatiblen Nachbauten (nur Uno genannt) sind in der Mikrocontroller-Bastelszene
-praktisch die "Klassiker". Es gibt inzwischen zwar viel leistungsfähigere Controller: schneller, mehr Speicher, WLAN usw., aber der UNO ist nach wie vor weit verbreitet und besonders einfach zu programmieren.
+Der [Arduino Uno](https://www.arduino.cc) und seine kompatiblen Nachbauten (nur Uno genannt) sind in der Mikrocontroller-Bastelszene die "Klassiker". Es gibt zwar inzwischen viel leistungsfähigere Controller: schneller, mehr Speicher, WLAN usw., aber der UNO ist nach wie vor weit verbreitet und besonders einfach zu programmieren.
 
 Im folgenden Experiment wird das Voltmeter durch einen Uno ersetzt, die übrige 
 Schaltung bleibt gleich. Die USB-Verbindung mit einem Computer hat eine dreifache Funktion:
@@ -100,8 +99,7 @@ Schaltung bleibt gleich. Die USB-Verbindung mit einem Computer hat eine dreifach
 
 ### Der Code
 
-Eine Detaillierte Einführung in die Mikrocontrollerprogrammierung würde den Rahmen dieses Projekts
-übersteigen Die Installation Arduino-IDE sowie erste Gehversuche sind auf diversen Internetseiten sehr ausführlich beschrieben, z.B. auf https://www.arduino.cc/en/Guide/HomePage
+Eine Detaillierte Einführung in die Mikrocontrollerprogrammierung würde den Rahmen dieses Projekts übersteigen. Allerdings sind die Installation der Arduino-IDE und erste Gehversuche auf diversen Internetseiten sehr ausführlich beschrieben, z.B. auf https://www.arduino.cc/en/Guide/HomePage
 
 Wenn man die IDE installiert hat und das Blink-Beispiel funktioniert, kann man 
 sich bereits and das unten stehende Beispiel trauen. Die Messwerte des Sensors 
@@ -135,8 +133,8 @@ void loop() {
 Für das folgende Experiment benötigen wir einen digitalen Lichtsensor (BH1750) 
 und ein OLED-Display (z.B. ein SH1106 mit 128 x 64 Pixeln), beide mit 
 sogenannter I2C-Schnittstelle. Der Vorteil on I2C ist, dass man nur 4 Leitungen 
-benötigt (Stromversorgung, Masse und 2 Datenleitungen) und dass mehrere beide Schaltkreise 
-einfach parallel schalten kann.
+benötigt (Stromversorgung, Masse und 2 Datenleitungen) und dass man mehrere 
+Schaltkreise einfach parallel schalten kann.
 
 Prinzipiell sind auch andere Sensoren und Displays geeignet. In diesem Fall sind 
 Schaltung und Code entsprechend anzupassen. Vorher sollte man die Chips 
@@ -281,7 +279,7 @@ Details sind dem Schaltplan und der folgenden Erläuterung zu entnehmen.
 
 Motoren und LEDs benötigen eventuell mehr Strom (und ggf. eine andere Spannung) 
 als der ESP32 von sich aus bereitstellen kann. Prinzipiell kann man das mit Relais lösen.
-Als energiesparendere (und billigere) Alternative wurden für diesen Zweck Transistoren verwendet, konkret MOSFETS vom Typ IRLZ24N, oder ein ähnlicher Typ. Sie bieten für den verwendungszweck genügend Leistungsreserven.
+Als energiesparendere (und billigere) Alternative wurden für diesen Zweck Transistoren verwendet, konkret MOSFETS vom Typ IRLZ24N, oder ein ähnlicher Typ. Sie bieten für den Verwendungszweck genügend Leistungsreserven.
 
 Mit Hilfe der MOSFETs lassen sich die jeweils benötigten Spannungen und Ströme schalten.
 
@@ -309,28 +307,28 @@ oder ein Selbstbau aus Schrumpfschlauch, Magnetwürfeln und Kleber.
 
 Alternativ kann man auch einen Rührer von oben bauen, z.B. aus einem kleinen Motor und dem Stempel einer Einwegspritze, oder eine Belüftung mit Hilfe einer Niederspannungs-Aquarienpumpe.
 
-# Folgt demnächst ...
+# Schüler- und Studienprojekte
 
 ## Organismen und Nährmedien
 
-
-
 * Planktonkultur
 * Nährmedien
-* Versuche und Ideen
+* Lichtregime
 
-
-## Zusätzliche Programme und Scripte
-
-* Raspberry Pi
-* Python-Server-Script und MariaDB-Datenbank
-* Visualisierung mit R und Shiny
 
 ## Datenanalyse und Statistik
 
 * Datenmanagement
+* Kalibrierung
 * Plotten, Zeitreihen, Glättung
 * ANOVA-Beispiel
+
+## Zusätzliche Programme und Scripte
+
+* MQTT-Server auf einem Raspberry Pi
+* Python-Server-Script und MariaDB-Datenbank
+* Visualisierung mit R und Shiny
+
 
 ----
 
