@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Sachverhalte werden schneller verstanden und langfristig abgespeichert, wenn das Wissen praktisch angewendet wurde. Genau das ist das Ziel, das mit diesem Projekt erreicht werden sollte.
 
-Beschrieben wird eine Apparatur, in der Wachstumsprozesse  einer Grünalgen-Batch-Kultur aufgezeichnet und anschließend visualisiert ausgewertet werden können. Verwendet wurde zur Konstruktion einfache Messeinrichtung (basierend auf der von Idee von THoams Petzoldt, siehe:), ein unkomplizierter Aufbau sowie eine leicht zu verstehende und den Wunschvorstellungen entsprechend anpassbare Software.
+Beschrieben wird eine Apparatur, in der Wachstumsprozesse  einer Grünalgen-Batch-Kultur aufgezeichnet und anschließend visualisiert ausgewertet werden können. Verwendet wurde zur Konstruktion einfache Messeinrichtung ein unkomplizierter Aufbau sowie eine leicht zu verstehende und den Wunschvorstellungen entsprechend anpassbare Software.
 
 Die Apparatur wurde für die Verwendung in schulischen und universitären Praktika entwickelt. Die Aufzeichnung von Wachstumskurven ist ohne großen Aufwand möglich. Zudem wird die Bedeutung von Kalibrierungen deutlich. Der Umgang mit Mikrocontrollern kann erlernt werden.
 
