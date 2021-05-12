@@ -45,4 +45,30 @@ Ausführliche Dokumentation auf https://tpetzoldt.github.io/growthlab
 
 [3] Wikipedia (2019) Makerbewegung. https://de.wikipedia.org/wiki/Maker abgerufen am 2019-05-28
 
-Autor: [tpetzoldt](https://github.com/tpetzoldt)
+
+### Nutzungsbedingungen
+
+Falls nicht anders angegeben sind **Codes**, Texte und Abbildungen unter der GNU General Public License lizenziert, und zwar wahlweise unter der [GPL 2.0](http://www.gnu.org/licenses/gpl-2.0) oder der [GPL 3.0](http://www.gnu.org/licenses/gpl-3.0).
+
+Die **Texte** und **Abbildungen** können außerdem (und falls nicht anders angegeben) auch gemäß der Creative Commons-Lizenz [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) verwendet werden. Falls im Einzelfall eine andere Lizenz gelten sollte, ist dies im jeweiligen Unterverzeichnis bzw. direkt im Dokument vermerkt.
+
+Die Doppellizenzierung (GPL bzw. CC BY) berücksichtigt unterschiedliche Gepflogenheiten bei freier Software (Code) und freier Dokumentation (Texte, Abbildungen). In beiden Fällen, können Materialien im Rahmen von schulischen, akademischen oder privaten Projekten frei verwendet werden. Eine kommerzielle Nutzung ist ebenfalls möglich.
+
+Namensnennung: Beide Lizenzen (GPL und CC BY) erfordern eine Namensnennung. Bitte nennen Sie die Institution und die im Dokument genannten Autor:innen und verlinken Sie mit der Webseite. Bei Rückfragen kontaktieren Sie bitte den [Maintainer](https://github.com/tpetzoldt).
+
+Beispiel: Name der Autor:in (2019) Titel des Teildokuments. **growthlab**: Reale und virtuelle Wachstumsexperimente für Schule und Studium. TU Dresden, Institut für Hydrobiologie, https://github.com/tpetzoldt/growthlab 
+
+----
+
+<a href="https://open-educational-resources.de/">
+<img src="img/OER_subline.jpg" height="50" alt="OER Logo"/>
+</a>
+<a href="https://creativecommons.org/licenses/by/4.0/">
+<img src="img/by.png" height="25" alt="CC BY Logo"/>
+</a>
+<a href="http://www.gnu.org/licenses/gpl-3.0">
+<img src="img/gplv3-127x51.png" height="25" alt="GPL v3 Logo"/>
+</a>
+
+
+[tpetzoldt](https://github.com/tpetzoldt) 2021-05-12
